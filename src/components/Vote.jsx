@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 
-export default class Vote extends React.Component {
+export default class Vote extends Component {
   
   getPair(){
-    return this.props.pair || [];
-
+    return this.props.pair || {} ;
   };
  
   isDisabled(){
@@ -17,8 +16,9 @@ export default class Vote extends React.Component {
 
   render() {
     return <div className="voting">
-      {this.getPair().map(entry =>
-        <button key={entry}
+      {this.getPair().map((entry, id) =>
+        <button className = {id}
+                key={entry}
                 disabled={this.isDisabled()}
                 onClick={() => this.props.vote(entry)}>
           <h1>{entry}</h1>
@@ -29,4 +29,9 @@ export default class Vote extends React.Component {
       )}
     </div>;
   }
+};
+
+Vote.propTypes = {
+  pair: PropTypes.any,
+  hasVoted: PropTypes.string
 };
