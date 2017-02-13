@@ -11,6 +11,7 @@ import remoteActionMiddleware from './remote_action_middleware';
 import { ResultsContainer } from './components/Results';
 import {VotingContainer} from './components/Voting';
 
+require('./style.css');
 
 const socket = io(`${location.protocol}//${location.hostname}:8090`);  
 

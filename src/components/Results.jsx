@@ -22,10 +22,10 @@ export default class Results extends Component {
         <div className="tally">
           {this.getPair().map(entry =>
             <div key={entry} className="entry">
-              <h1>{entry}</h1>
-              <div className="voteCount">
+              <span>{entry}</span>
+              <span className="voteCount">
                 {this.getVotes(entry)}
-              </div>
+              </span>
             </div>
           )}
         </div>
@@ -33,7 +33,7 @@ export default class Results extends Component {
           <button ref="next"
                    className="next"
                    onClick={this.props.next}>
-            Next
+            <h1>Next</h1>
           </button>
         </div>
       </div>;

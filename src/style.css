@@ -1,0 +1,44 @@
+body {
+  background-color: #2874F0;
+  color: white;
+}
+
+
+.btn_0 {
+  width: 30%;
+  margin-left: 15%;
+  border-radius:10px;
+}
+.btn_1 {
+  width: 30%;
+  margin-left: 12%;
+  border-radius:10px;
+}
+.next {
+  width: 20%;
+  border-radius:10px;
+  margin-left: 40%;
+  margin-top: 40px;
+}
+.entry {
+  display: inline-block;
+  width: 800px;
+  margin-left: 20%;
+  font-size: 30px;
+  margin-top: 30px;
+
+}
+.entry span {
+  display: inline-block;
+  width: 350px;
+}
+.voteCount {
+    text-align: right;
+}
+.voting {
+  margin-top: 200px;
+}
+.winner {
+  text-align: center;
+  margin-top: 200px;
+}

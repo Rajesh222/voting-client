@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 export default class Vote extends Component {
   
   getPair(){
-    return this.props.pair || {} ;
+    return this.props.pair || [] ;
   };
  
   isDisabled(){
@@ -16,8 +16,11 @@ export default class Vote extends Component {
 
   render() {
     return <div className="voting">
-      {this.getPair().map((entry, id) =>
-        <button className = {id}
+      {this.getPair().map((entry, id) =>{ 
+         let button_number = "btn_" + id; 
+        return(
+          
+        <button className = {button_number}
                 key={entry}
                 disabled={this.isDisabled()}
                 onClick={() => this.props.vote(entry)}>
@@ -26,7 +29,9 @@ export default class Vote extends Component {
             <div className="label">Voted</div> :
             null}
         </button>
-      )}
+        );
+        
+      })}
     </div>;
   }
 };

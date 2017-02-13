@@ -14,7 +14,7 @@ describe('Voting', () => {
               <Voting pair={["Trainspotting", "28 Days Later"]}
               vote={vote}/>
             );
-    wrapper.find('.1').simulate('click');
+    wrapper.find('.btn_1').simulate('click');
     expect(vote).to.have.property('callCount', 1);
   });
 
@@ -32,7 +32,7 @@ describe('Voting', () => {
               hasVoted="Trainspotting" />
     );
     const buttons = wrapper.find('button');
-    expect(buttons.find('.0').find('.label')).to.have.text('Voted')
+    expect(buttons.find('.btn_0').find('.label')).to.have.text('Voted')
   });
 
   it('renders just the winner when there is one', () => {
